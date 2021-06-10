@@ -1,0 +1,22 @@
+Name: add.rpc
+ListenOn: 0.0.0.0:8010
+
+Etcd:
+  Hosts:
+  - 127.0.0.1:2379
+  Key: add.rpc
+
+DataSource: root:88888888@tcp(127.0.0.1:3306)/gozero?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
+
+Cache:
+  - Host: localhost:6379
+
+Log:
+  Mode: file
+  KeepDays: 3
+  Level: info
+
+Prometheus:
+  Host: 127.0.0.1
+  Port: 8011
+  Path: /metrics
